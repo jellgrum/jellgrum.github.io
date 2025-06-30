@@ -10,32 +10,17 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  prepare:
+  build-and-deploy:
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
       - name: Install dependencies
         run: npm ci --no-fund
-      - name: Log
-        run: ls -lah
-
-  build:
-    needs: prepare
-    runs-on: ubuntu-latest
-    steps:
       - name: Build
         run: npm run build
-
-  deploy:
-    needs: build
-    permissions:
-      contents: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         with:
