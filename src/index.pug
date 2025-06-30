@@ -1,0 +1,124 @@
+doctype html
+html(lang='en')
+    head
+        include templates/head
+        title Jellgrum
+
+    body
+        main
+            section
+                header
+                    h1 Kamil Ramazanov
+                    h2 Frontend Software Engineer
+
+            section
+                h2 Skills
+                details(open)
+                    summary Javascript
+                    ul
+                        li Typescript
+                        li React.js
+                        li Redux, MobX
+                        li jQuery
+                details
+                    summary Node.js
+                    ul
+                        li Express.js
+                        li Razzle
+                details
+                    summary Markup
+                    ul
+                        li HTML5, CSS3
+                        li SASS/SCSS, Less
+                        li Pug
+                details
+                    summary Workflow
+                    ul
+                        li JetBrains WebStorm
+                        li Git
+                        li npm/yarn
+                        li Webpack, Babel
+                        li Eslint
+                        li Windows, Ubuntu
+                details
+                    summary Soft skills
+                    ul
+                        li Teamwork
+                        li Mentoring
+                        li Code review
+
+            section#experience
+                h2 Experience
+                ul
+                    li
+                        a(href='https://techlab.s7.ru' target='_blank' rel='noreferrer') S7 Techlab
+                        |
+                        |
+                        time (November 2022 - December 2023, 1 year 2 months)
+                    li
+                        a(href='https://www.florist.ru' target='_blank' rel='noreferrer') Florist.ru - Digital
+                        |
+                        |
+                        time (May 2021 - November 2022, 1 year 7 months)
+                    li
+                        a(href='https://maxima.life' target='_blank' rel='noreferrer') Maxima
+                        |
+                        |
+                        time (July 2020 - May 2021, 11 months)
+                    li
+                        | Infotech Group
+                        |
+                        |
+                        time (April 2019 - July 2020, 1 year 4 months)
+                    li
+                        a(href='https://mytona.com' target='_blank' rel='noreferrer') Mytona
+                        |
+                        |
+                        time (February 2018 - March 2019, 1 year 2 months)
+                    li
+                        | Freelance
+                        |
+                        time (October 2017 - January 2018, 4 months)
+                    li
+                        | Digital Coach
+                        |
+                        time (July 2017 - October 2017, 4 months)
+
+        footer
+            p Made with #[span(class='heart') ❤] by #[a(href='https://github.com/jellgrum' target='_blank') Jellgrum]
+
+        script(type='text/javascript').
+            document.addEventListener('DOMContentLoaded', function () {
+                var experienceList = document.querySelectorAll('#experience time');
+                var experienceTitle = document.querySelector('#experience h2');
+                var totalExperienceMonths = 0;
+
+                function maximizeTime(months) {
+                    if (months < 12) {
+                        return months + ' months';
+                    }
+
+                    var years = Math.floor(months / 12);
+                    months = months % 12;
+
+                    var total = years + ' year' + (years > 1 ? 's' : '');
+                    if (months === 0) {
+                        return total;
+                    }
+
+                    return total + ' ' + months + ' month' + (months > 1 ? 's' : '');
+                }
+
+                experienceList.forEach(function (timeEl) {
+                    var indexComma = timeEl.textContent.indexOf(',');
+                    var time = timeEl.textContent.slice(indexComma + 2, -1);
+                    var years = (time.match(/\d+ year/g) || ['0'])[0].replace(' year', '');
+                    var months = (time.match(/\d+ month/g) || ['0'])[0].replace(' month', '');
+                    var totalMonths = Number(years) * 12 + Number(months);
+
+                    totalExperienceMonths += totalMonths;
+                });
+
+                var totalExperienceTime = ' (' + maximizeTime(totalExperienceMonths) + ')';
+                experienceTitle.textContent = experienceTitle.textContent + totalExperienceTime;
+            });
