@@ -17,6 +17,8 @@ jobs:
         uses: actions/checkout@v4
       - name: Install dependencies
         run: npm ci --no-fund
+      - name: Log
+        run: ls -lah
 
   build:
     needs: prepare
