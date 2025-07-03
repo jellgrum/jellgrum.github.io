@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "npx parcel serve -p 3000 src/index.pug",
     "clean": "rm -rf ./.parcel-cache ./dist",
-    "build": "npx parcel build --no-source-maps --no-cache src/index.pug src/404.pug"
+    "build": "npx parcel build --no-source-maps --no-cache --no-content-hash src/index.pug src/404.pug"
   },
   "author": "https://github.com/jellgrum",
   "license": "ISC",
