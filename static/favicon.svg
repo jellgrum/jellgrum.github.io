@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64px" height="64px" viewBox="30 30 140 148">
+  <rect x="30" y="38" width="140" height="140" rx="20" fill="#1a1a1a"></rect>
+
+  <defs>
+    <linearGradient id="keyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#444;stop-opacity:1"></stop>
+      <stop offset="100%" style="stop-color:#2a2a2a;stop-opacity:1"></stop>
+    </linearGradient>
+  </defs>
+  <rect x="30" y="30" width="140" height="135" rx="20" fill="url(#keyGrad)" stroke="#555" stroke-width="1"></rect>
+
+  <text x="100" y="102" font-family="Arial, sans-serif" font-size="80" font-weight="bold" fill="#ececec" text-anchor="middle" dominant-baseline="middle">J</text>
+
+  <rect x="80" y="132" width="40" height="4" rx="2" fill="#666"></rect>
+</svg>

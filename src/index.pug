@@ -1,0 +1,91 @@
+doctype html
+html(lang='en')
+    head
+        include templates/head
+        title Jellgrum
+
+    body
+        main
+            section
+                header
+                    h1 Kamil Ramazanov
+                    h2 Software Engineer
+
+            section
+                h2 Skills
+                details(open)
+                    summary DevOps
+                    ul
+                        li GitHub Actions, GitLab CI
+                        li Docker
+                        li Prometheus, Grafana
+                details
+                    summary Frontend
+                    ul
+                        li HTML, CSS, JS/TS
+                        li SASS, Less
+                        li React, Redux/RTK, Mobx
+                details
+                    summary Backend
+                    ul
+                        li Node.js/Bun
+                        li Express
+                        li SSR
+                details
+                    summary Soft skills
+                    ul
+                        li Teamwork
+                        li Mentoring
+                        li Code review
+
+            section(data-section='experience')
+                h2 Experience
+                ul
+                    li
+                        a(href='https://techlab.s7.ru' target='_blank' rel='noreferrer') S7 Techlab
+                        |
+                        |
+                        time (November 2022 - December 2023)
+                    li
+                        a(href='https://www.florist.ru' target='_blank' rel='noreferrer') Florist.ru - Digital
+                        |
+                        |
+                        time (May 2021 - November 2022)
+                    li
+                        a(href='https://maxima.life' target='_blank' rel='noreferrer') Maxima
+                        |
+                        |
+                        time (July 2020 - May 2021)
+                    li
+                        | Infotech Group
+                        |
+                        |
+                        time (April 2019 - July 2020)
+                    li
+                        a(href='https://mytona.com' target='_blank' rel='noreferrer') Mytona
+                        |
+                        |
+                        time (February 2018 - March 2019)
+                    li
+                        | Freelance
+                        |
+                        time (October 2017 - January 2018x)
+                    li
+                        | Digital Coach
+                        |
+                        time (July 2017 - October 2017)
+
+            section
+                h2 Personal DevOps Lab (Homelab)
+                ul
+                    li
+                        b OS
+                        .
+                            : Firebat AK2, Debian 13, Docker
+                    li
+                        b Stack
+                        .
+                            : Nginx, VoidAuth, Beszel, Dozzle, Prometheus, Grafana, Poznote, Commafeed, Bun web-servers
+
+        footer
+            p Made by #[a(href='https://github.com/jellgrum' target='_blank') Jellgrum]

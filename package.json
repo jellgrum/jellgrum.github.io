@@ -1,0 +1,26 @@
+{
+    "name": "jellgrum.dev_frontend",
+    "version": "1.0.0",
+    "description": "jellgrum.dev",
+    "scripts": {
+        "dev": "npx parcel serve -p 3000 src/index.pug",
+        "clean": "rm -rf ./.parcel-cache ./dist",
+        "build": "npx parcel build --no-source-maps --no-cache src/index.pug src/404.pug src/50x.pug"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jellgrum/jellgrum.github.io.git"
+    },
+    "author": "https://github.com/jellgrum",
+    "license": "ISC",
+    "homepage": "https://github.com/jellgrum/jellgrum.github.io",
+    "devDependencies": {
+        "@parcel/transformer-pug": "^2.6.0",
+        "@parcel/transformer-sass": "^2.6.1",
+        "parcel": "^2.6.0",
+        "parcel-reporter-static-files-copy": "^1.3.4"
+    },
+    "browserslist": [
+        "> 0%"
+    ]
+}
